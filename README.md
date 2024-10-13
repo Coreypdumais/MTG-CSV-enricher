@@ -54,7 +54,7 @@ Now you're ready to use the script!
      ```bash
      git clone <repository_url>
      ```
-   - Alternatively, just download the `csv_converter.py` file and place it in your working directory.
+   - Alternatively, just download the `csv_enricher.py` file and place it in your working directory.
 
 2. **Prepare Your CSV File**  
    - If you're using **ManaBox**, export your collection to a CSV file and ensure it includes a `Scryfall ID` column.
@@ -64,19 +64,19 @@ Now you're ready to use the script!
    Open a command prompt (Windows) or terminal (MacOS/Linux), navigate to the directory where the script is located, and run it by typing:
 
    ```bash
-   python3 csv_converter.py <your_csv_file.csv>
+   python3 csv_enricher.py <your_csv_file.csv>
    ```
 
    You can also process multiple CSV files at once:
 
    ```bash
-   python3 csv_converter.py <file1.csv> <file2.csv>
+   python3 csv_enricher.py <file1.csv> <file2.csv>
    ```
 
    If you want more detailed output, add the `-v` (verbose) flag:
 
    ```bash
-   python3 csv_converter.py -v <your_csv_file.csv>
+   python3 csv_enricher.py -v <your_csv_file.csv>
    ```
 
 4. **Output**  
