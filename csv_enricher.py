@@ -7,12 +7,24 @@ import csv
 import os
 
 
+
+
+
 API = "https://api.scryfall.com"
 # REMINDER : Here the key is the parameter for the Scryfall API and the value is the name you want for the column where that data will be stored in your csv.
 DATA_TO_IMPORT = {
-    "colors": "Colors"
-}
+    "mana_cost": "Mana cost", 
+    "type_line": "Type line", 
+    "oracle_text": "Oracle text", 
+    "power": "Power", 
+    "toughness": "Toughness",
+    "cmc": "cmc",
+    "color_identity": "Color Identity",
+    "keywords": "Keywords",
+    "set": "Set",
+    "rarity": "Rarity"
 
+}
 ACCEPTED_PARAMETERS = [
  'object', 'id', 'oracle_id', 'multiverse_ids', 'mtgo_id', 'mtgo_foil_id', 
  'tcgplayer_id', 'cardmarket_id', 'name', 'lang', 'released_at', 'uri', 
@@ -136,7 +148,7 @@ def main():
    
     for file in args.csv_files:
         logging.info(f"Processing {file} ...")
-        with open(file, mode='r', newline='') as opened_file:
+        with open(file, mode='r', newline='', encoding='utf-8') as opened_file:
             reader = csv.DictReader(opened_file)
             column_names = reader.fieldnames
             if "Scryfall ID" not in column_names:
@@ -166,7 +178,7 @@ def main():
             if args.verbose:
                 print("==============================================================\n")
 
-            with open(file, mode='w', newline='') as file:
+            with open(file, mode='w', newline='', encoding='utf-8') as file:
                 writer = csv.DictWriter(file, fieldnames=column_names)
                 writer.writeheader()
                 for row in rows:
