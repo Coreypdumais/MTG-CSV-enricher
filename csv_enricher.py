@@ -22,7 +22,9 @@ DATA_TO_IMPORT = {
     "color_identity": "Color Identity",
     "keywords": "Keywords",
     "set": "Set",
-    "rarity": "Rarity"
+    "rarity": "Rarity",
+    "prices": "Prices",
+    "usd": "USD"
 
 }
 ACCEPTED_PARAMETERS = [
