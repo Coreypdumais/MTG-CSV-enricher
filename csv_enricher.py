@@ -7,9 +7,6 @@ import csv
 import os
 
 
-
-
-
 API = "https://api.scryfall.com"
 # REMINDER : Here the key is the parameter for the Scryfall API and the value is the name you want for the column where that data will be stored in your csv.
 DATA_TO_IMPORT = {
